@@ -1,4 +1,4 @@
-﻿namespace Entities.Repositories.Interfaces
+﻿namespace Entities.Repositories
 {
     public interface IAccountRepository
     {

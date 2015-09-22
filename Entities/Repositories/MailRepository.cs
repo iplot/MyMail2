@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entities.Repositories.Interfaces;
 
 namespace Entities.Repositories
 {
     class MailRepository : BaseRepository<Mail>, IMailRepository
     {
+        public MailRepository(IDbContextFactory contextFactory) : base(contextFactory)
+        {
+        }
     }
 }

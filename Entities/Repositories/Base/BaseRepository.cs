@@ -9,10 +9,10 @@ namespace Entities.Repositories
     {
         private DbContext _context;
 
-//        protected BaseRepository(DbContext context)
-//        {
-//            _context = context;
-//        }
+        protected BaseRepository(IDbContextFactory contextFactory)
+        {
+            _context = contextFactory.Context;
+        }
 
         public DbContext Context { set { _context = value; } }
 
