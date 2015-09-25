@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    class MyMailDataContext : DbContext
+    public class MyMailDataContext : DbContext
     {
+        public MyMailDataContext()
+        {
+            Database.SetInitializer(new MyMailDataInitializer());
+        }
+
         public DbSet<User> Users { get; set; }  //delete late
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Mail> Mails { get; set; }
@@ -19,7 +24,7 @@ namespace Entities
         {
             modelBuilder.Entity<Account>()
                 .HasMany(x => x.Contacts)
-                .WithMany(x => x.Contacts).Map(x =>
+                .WithMany().Map(x =>
                 {
                     x.ToTable("Contacts");
                     x.MapLeftKey("Contact1");

@@ -1,6 +1,6 @@
 ﻿namespace Entities.Repositories
 {
-    public interface IAtachmentsRepository
+    public interface IAtachmentsRepository : IRepository<Atachment>
     {
          
     }

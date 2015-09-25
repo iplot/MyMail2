@@ -1,6 +1,6 @@
 ﻿namespace Entities.Repositories
 {
-    public interface IAccountRepository
+    public interface IAccountRepository : IRepository<Account>
     {
          
     }

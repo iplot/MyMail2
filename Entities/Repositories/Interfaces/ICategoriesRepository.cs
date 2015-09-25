@@ -1,6 +1,6 @@
 ﻿namespace Entities.Repositories
 {
-    public interface ICategoriesRepository
+    public interface ICategoriesRepository : IRepository<Category>
     {
          
     }

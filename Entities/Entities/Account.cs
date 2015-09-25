@@ -9,6 +9,11 @@ namespace Entities
 {
     public class Account : IEntity
     {
+        public Account()
+        {
+            Contacts = new HashSet<Account>();
+        }
+
         public int Id { get; set; }
         public string SmtpServerHost { get; set; }
         public int SmtpServerPort { get; set; }

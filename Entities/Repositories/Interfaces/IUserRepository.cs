@@ -1,6 +1,6 @@
 ﻿namespace Entities.Repositories
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository<User>
     {
          
     }
