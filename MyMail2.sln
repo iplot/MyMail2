@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMail2.DataAccess", "Entit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMail2.Tests", "MyMail2.Tests\MyMail2.Tests.csproj", "{0F0EE64E-FFE3-4F1A-A747-E43BE79DC045}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMail2.Security", "MyMail2.Security\MyMail2.Security.csproj", "{6F6B797C-EB29-4C92-B98D-53DC52238BC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0F0EE64E-FFE3-4F1A-A747-E43BE79DC045}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F0EE64E-FFE3-4F1A-A747-E43BE79DC045}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F0EE64E-FFE3-4F1A-A747-E43BE79DC045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F6B797C-EB29-4C92-B98D-53DC52238BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F6B797C-EB29-4C92-B98D-53DC52238BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F6B797C-EB29-4C92-B98D-53DC52238BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F6B797C-EB29-4C92-B98D-53DC52238BC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
