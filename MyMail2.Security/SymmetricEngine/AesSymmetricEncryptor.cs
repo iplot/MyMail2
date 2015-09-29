@@ -9,11 +9,11 @@ using MyMail2.Security.Helpers;
 
 namespace MyMail2.Security.SymmetricEngine
 {
-    public class SymmetricEncryptor : ISymmetricEncryptor
+    public class AesSymmetricEncryptor : ISymmetricEncryptor
     {
-        private AesManaged _aesManager;
+        private Aes _aesManager;
 
-        public SymmetricEncryptor()
+        public AesSymmetricEncryptor()
         {
             _aesManager = new AesManaged();
         }
@@ -82,7 +82,7 @@ namespace MyMail2.Security.SymmetricEngine
         {
             if (_aesManager.Key == null || _aesManager.IV == null)
             {
-                throw new Exception("Encruption keys missed");
+                throw new Exception("Symmetric encryption keys missed");
             }
         }
     }

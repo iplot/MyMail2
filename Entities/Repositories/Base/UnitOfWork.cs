@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 
 namespace Entities.Repositories
 {
@@ -13,7 +14,14 @@ namespace Entities.Repositories
 
         public void SaveChanges()
         {
-            _context.SaveChanges();
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Entities
 {
     public class User : IEntity
     {
-        public int Id { get; set; }//delete late
+        public int Id { get; set; }//TODO delete late
 
         public string FirstName { get; set; }
         public string SymKey { get; set; }

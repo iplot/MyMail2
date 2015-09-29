@@ -16,7 +16,7 @@ namespace MyMail2.Tests.Security
 
         public SymmetricEncryptorTests()
         {
-            _encryptor = new SymmetricEncryptor();
+            _encryptor = new AesSymmetricEncryptor();
         }
 
         [Test]

@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,27 +20,62 @@ namespace Entities.Repositories
 
         public T Get(int id)
         {
-            return _context.Set<T>().FirstOrDefault(x => x.Id == id);
+            try
+            {
+                return _context.Set<T>().FirstOrDefault(x => x.Id == id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public IQueryable<T> GetAll()
         {
-            return _context.Set<T>().AsQueryable();
+            try
+            {
+                return _context.Set<T>().AsQueryable();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public void Add(T item)
         {
-            _context.Set<T>().Add(item);
+            try
+            {
+                _context.Set<T>().Add(item);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public void Update(T item)
         {
-            _context.Entry(item).State = EntityState.Modified;
+            try
+            {
+                _context.Entry(item).State = EntityState.Modified;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public void Delete(T item)
         {
-            _context.Set<T>().Remove(item);
+            try
+            {
+                _context.Set<T>().Remove(item);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

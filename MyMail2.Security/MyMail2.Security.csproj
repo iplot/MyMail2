@@ -39,11 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsymmetricEngine\RsaAsymmetricEncryptor.cs" />
     <Compile Include="Helpers\StringByteConverter.cs" />
     <Compile Include="IEncryptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SymmetricEngine\ISymmetricEncryptor.cs" />
-    <Compile Include="SymmetricEngine\SymmetricEncryptor.cs" />
+    <Compile Include="SymmetricEngine\AesSymmetricEncryptor.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
