@@ -3,6 +3,7 @@
     public interface IHashProvider
     {
         byte[] GetHash(byte[] data);
-        object CreateHashProviderObject { get; }
+//        object CreateHashProviderObject { get; }
+        string AlgName { get; }
     }
 }

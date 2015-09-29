@@ -62,10 +62,10 @@
     <Compile Include="Repositories\AtachmentsRepository.cs" />
     <Compile Include="Repositories\Base\BaseRepository.cs" />
     <Compile Include="Repositories\Base\DbContextFactory.cs" />
-    <Compile Include="Repositories\Base\IDbContextFactory.cs" />
+    <Compile Include="Repositories\Base\Interfaces\IDbContextFactory.cs" />
     <Compile Include="Repositories\Base\Interfaces\IRepository.cs" />
     <Compile Include="Repositories\Base\Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Repositories\Base\Interfaces\UnitOfWork.cs" />
+    <Compile Include="Repositories\Base\UnitOfWork.cs" />
     <Compile Include="Repositories\CategoriesRepository.cs" />
     <Compile Include="Repositories\Interfaces\IAccountRepository.cs" />
     <Compile Include="Repositories\Interfaces\IAtachmentsRepository.cs" />

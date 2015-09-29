@@ -5,6 +5,12 @@ namespace MyMail2.Security.HashProvider
 {
     public class Sha1HashProvider : IHashProvider
     {
+        private string _name = "SHA1";
+
+        public string AlgName { 
+            get { return _name; }
+        }
+
         public byte[] GetHash(byte[] data)
         {
             try
@@ -19,8 +25,5 @@ namespace MyMail2.Security.HashProvider
                 throw ex;
             }
         }
-
-        //TODO Choose a better name
-        public object CreateHashProviderObject { get { return new SHA1CryptoServiceProvider(); } }
     }
 }
