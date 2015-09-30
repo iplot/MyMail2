@@ -18,12 +18,16 @@ namespace MyMail2.Security.SymmetricEngine
             _aesManager = new AesManaged();
         }
 
+        //null -> ArgumentNullException
+        //byte[0] -> CryptographicException
         public byte[] Key
         {
             get { return _aesManager.Key; }
             set { _aesManager.Key = value; }
         }
 
+        //null -> ArgumentNullException
+        //byte[0] -> CryptographicException
         public byte[] IdentVector
         {
             get { return _aesManager.IV; }
@@ -34,8 +38,6 @@ namespace MyMail2.Security.SymmetricEngine
         {
             try
             {
-                checkKeys();
-
                 ICryptoTransform transform = _aesManager.CreateEncryptor();
 
                 using (MemoryStream output = new MemoryStream())
@@ -59,8 +61,6 @@ namespace MyMail2.Security.SymmetricEngine
         {
             try
             {
-                checkKeys();
-
                 ICryptoTransform transform = _aesManager.CreateDecryptor();
 
                 using (MemoryStream input = new MemoryStream(encryptedValue))
@@ -75,14 +75,6 @@ namespace MyMail2.Security.SymmetricEngine
             catch (Exception ex)
             {
                 throw ex;
-            }
-        }
-
-        private void checkKeys()
-        {
-            if (_aesManager.Key == null || _aesManager.IV == null)
-            {
-                throw new Exception("Symmetric encryption keys missed");
             }
         }
     }
