@@ -53,7 +53,8 @@ namespace MyMail2.Tests.Security
             string test_val = "Test string";
 
             //Assert
-            Assert.Throws<Exception>(() => _encryptor.Encrypt(Encoding.UTF8.GetBytes(test_val)));
+            _encryptor.Encrypt(Encoding.UTF8.GetBytes(test_val));
+//            Assert.Throws<Exception>(() => _encryptor.Encrypt(Encoding.UTF8.GetBytes(test_val)));
         }
 
         [TestCase(null, ExpectedException = typeof(ArgumentNullException))]
@@ -65,7 +66,8 @@ namespace MyMail2.Tests.Security
             string test_val = "Test string";
 
             //Assert
-            Assert.Throws<Exception>(() => _encryptor.Encrypt(Encoding.UTF8.GetBytes(test_val)));
+            _encryptor.Encrypt(Encoding.UTF8.GetBytes(test_val));
+//            Assert.Throws<Exception>(() => _encryptor.Encrypt(Encoding.UTF8.GetBytes(test_val)));
         }
     }
 }

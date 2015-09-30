@@ -3,7 +3,9 @@ using System.Security.Cryptography;
 
 namespace MyMail2.Security.AsymmetricEngine
 {
-    public class RsaAsymmetricEncryptor : IRsaAsymmetricEncryptor
+    //TODO Create exception for Key = byte[0]
+
+    public class RsaAsymmetricEncryptor : IAsymmetricEncryptor
     {
         private readonly RSACryptoServiceProvider _rsaEncryptor;
 
@@ -12,6 +14,8 @@ namespace MyMail2.Security.AsymmetricEngine
             _rsaEncryptor = new RSACryptoServiceProvider();
         }
 
+        //null -> ArgumentNullException
+        //byte[0] -> IndexOutOfRangeException
         public byte[] RsaKeys
         {
             get { return _rsaEncryptor.ExportCspBlob(true); }
@@ -22,8 +26,6 @@ namespace MyMail2.Security.AsymmetricEngine
         {
             try
             {
-                keysCheck();
-
                 return _rsaEncryptor.Encrypt(originalValue, false);
             }
             catch (Exception ex)
@@ -36,21 +38,11 @@ namespace MyMail2.Security.AsymmetricEngine
         {
             try
             {
-                keysCheck();
-
                 return _rsaEncryptor.Decrypt(encryptedValue, false);
             }
             catch (Exception ex)
             {
                 throw ex;
-            }
-        }
-
-        private void keysCheck()
-        {
-            if (RsaKeys == null || RsaKeys.Length == 0)
-            {
-                throw new Exception("Asymmetric encryption keys missed");
             }
         }
     }

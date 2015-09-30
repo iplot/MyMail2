@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMail2", "MyMail2\MyMail2.csproj", "{0E03AA3C-8206-4222-8C64-3F5189E95D26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMail2.DataAccess", "Entities\MyMail2.DataAccess.csproj", "{28E2E271-6E43-4E7D-BB85-FA9D0FA1C7DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMail2.DataAccess", "MyMail2.DataAccess\MyMail2.DataAccess.csproj", "{28E2E271-6E43-4E7D-BB85-FA9D0FA1C7DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMail2.Tests", "MyMail2.Tests\MyMail2.Tests.csproj", "{0F0EE64E-FFE3-4F1A-A747-E43BE79DC045}"
 EndProject

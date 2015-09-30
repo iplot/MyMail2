@@ -16,6 +16,7 @@ namespace MyMail2.Security.SignEngine
         public RsaSignProvider(IHashProvider provider)
         {
             _hashProvider = provider;
+            _signProvider = new RSACryptoServiceProvider();
         }
 
         public byte[] Keys
@@ -49,14 +50,6 @@ namespace MyMail2.Security.SignEngine
             catch (Exception ex)
             {
                 throw ex;
-            }
-        }
-
-        private void KeysCheck()
-        {
-            if (Keys == null || Keys.Length == 0)
-            {
-                throw new Exception("Sign algorithm keys missed");
             }
         }
     }

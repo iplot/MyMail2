@@ -54,6 +54,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\UserRepositoryTests.cs" />
+    <Compile Include="Security\AsymmetricEncryptorTests.cs" />
+    <Compile Include="Security\SignProviderTests.cs" />
     <Compile Include="Security\SymmetricEncryptorTests.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,7 +63,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entities\MyMail2.DataAccess.csproj">
+    <ProjectReference Include="..\MyMail2.DataAccess\MyMail2.DataAccess.csproj">
       <Project>{28e2e271-6e43-4e7d-bb85-fa9d0fa1c7de}</Project>
       <Name>MyMail2.DataAccess</Name>
     </ProjectReference>

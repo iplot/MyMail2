@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsymmetricEngine\IRsaAsymmetricEncryptor.cs" />
+    <Compile Include="AsymmetricEngine\IAsymmetricEncryptor.cs" />
     <Compile Include="AsymmetricEngine\RsaAsymmetricEncryptor.cs" />
     <Compile Include="HashProvider\IHashProvider.cs" />
     <Compile Include="HashProvider\Sha1HashProvider.cs" />
